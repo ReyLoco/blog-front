@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { HOME, POSTS, USERS } from '../../constants'
+import { HOME, ARTICLES, USERS } from '../../constants'
 
 export default function index() {
   return (
     <nav>
       <Link href="/"><a>{HOME}</a></Link>
       <Link href="/users"><a>{USERS}</a></Link>
-      <Link href="/posts"><a>{POSTS}</a></Link>
+      <Link href="/articles"><a>{ARTICLES}</a></Link>
 
       <style jsx>{`
         nav{

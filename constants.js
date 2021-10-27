@@ -1,9 +1,9 @@
-export const TITULO = "Mi Blog";
+export const TITLE = "Mi Blog";
 
-export const DESCRIPCION = "Descripción de mi Blog";
+export const DESCRIPTION = "Descripción de mi Blog";
 
 export const HOME = "Home";
-export const HOMEDESC = "Página Home de este blog";
+export const HOMEDESC = "Página de inicio de este blog";
 export const HOMETIT = "Titulo de home";
 export const HOMETEXT = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nulla vitae ligula hendrerit mattis.",
@@ -20,12 +20,14 @@ export const USERS = "Usuarios";
 export const USERSDESC = "Página de usuarios de este blog";
 export const USERS_DET = "Detalles del usuario";
 
-export const CONTACT = "Contact";
+export const CONTACT = "Contacto";
 export const CONTACTDESC = "Página de contacto de este blog";
 
-export const POSTS = "Posts";
-export const POSTSDESC = "Página de posts de este blog";
-export const POSTS_DET = "Detalles de post";
+
+export const ARTICLE = "Artículo";
+export const ARTICLES = "Artículos";
+export const ARTICLEDESC = "Página de artículos de este blog";
+export const ARTICLE_DET = "Detalles de artículo";
 
 export const ART_NEW = "Nuevo Artículo";
 export const ART_NEW_DESC = "Página para crear un nuevo Artículo";

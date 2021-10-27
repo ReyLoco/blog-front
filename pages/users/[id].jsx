@@ -1,6 +1,6 @@
 import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
-import Layout from "../../components/Layout";
+import Image from "next/image";
 import Title from "../../components/Title";
 import { USERS_DET } from "../../constants";
 
@@ -12,7 +12,7 @@ export default function User({ user }) {
   }
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Blog: Detalle de usuario</title>
         <meta name="description" content="Blog creado para aprender Next.js, MongoDB y API REST" />
@@ -21,6 +21,7 @@ export default function User({ user }) {
         {USERS_DET} con ID: {user._id}
       </Title>
       <div className="card">
+        <Image src={`/images/${user._id}.jpg`} width={400} height={600}></Image>
         <p>Nombre: {user.name}</p>
         <p>Apellidos: {user.surname}</p>
         <p>Email: {user.email}</p>
@@ -65,7 +66,7 @@ export default function User({ user }) {
           }
         `}
       </style>
-    </Layout>
+    </>
   );
 }
 export async function getStaticPaths() {

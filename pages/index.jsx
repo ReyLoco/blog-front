@@ -1,17 +1,18 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
 import Title from "../components/Title";
-import { HOME } from "../constants";
+import { DESCRIPTION, HOME, HOMEDESC, TITLE } from "../constants";
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Blog para aprender Next.js</title>
-        <meta name="description" content="Blog creado para aprender Next.js, MongoDB y API REST" />
+        <title>
+          {TITLE}: {HOMEDESC}
+        </title>
+        <meta name="description" content={DESCRIPTION} />
       </Head>
       <Title>{HOME}</Title>
       <p>Aprendamos lo qeu sea</p>
-    </Layout>
+    </>
   );
 }

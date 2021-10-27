@@ -1,22 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout from "../../components/Layout";
 import Title from "../../components/Title";
-import { USERS } from "../../constants";
+import { DESCRIPTION, TITLE, USERS } from "../../constants";
 
 export default function Users({ users }) {
   return (
-    <Layout>
+    <>
       <Head>
-        <title>Blog: Lista de usuarios</title>
-        <meta name="description" content="Blog creado para aprender Next.js, MongoDB y API REST" />
+        <title>{TITLE}: {USERS}</title>
+        <meta name="description" content={DESCRIPTION} />
       </Head>
       <Title>{USERS}</Title>
       <div className="grid">
         {users.map(({ _id, name, surname, email, createdAt, updatedAt, address, location, province, country }, i) => {
           return (
-            <div className="card">
-              <Link href={"/users/[_id]"} as={`/users/${_id}`} key={i + 1}>
+            <div className="card" key={i + 1}>
+              <Link href={"/users/[_id]"} as={`/users/${_id}`} >
                 <div>
                   <h3>
                     <a>
@@ -75,7 +74,7 @@ export default function Users({ users }) {
           }
         `}
       </style>
-    </Layout>
+    </>
   );
 }
 
